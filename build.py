@@ -44,3 +44,22 @@ for entry in entries:
     cur.execute('insert into searchIndex(name, type, path) values (?,?,?)', insert)
 
 db.commit()
+
+infoplist = """<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>CFBundleIdentifier</key>
+    <string>cmdlet</string>
+    <key>CFBundleName</key>
+    <string>CMDlet</string>
+    <key>DocSetPlatformFamily</key>
+    <string>cmdlet</string>
+    <key>isDashDocset</key>
+    <true/>
+</dict>
+</plist>"""
+
+with open('cmdlet.docset/Contents/Info.plist', 'w') as f:
+    f.write(infoplist)
+
