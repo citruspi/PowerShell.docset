@@ -63,3 +63,23 @@ infoplist = """<?xml version="1.0" encoding="UTF-8"?>
 with open('cmdlet.docset/Contents/Info.plist', 'w') as f:
     f.write(infoplist)
 
+for entry in entries:
+
+    source = open('cmdlet.docset/Contents/Resources/Documents/'+title+'.html', 'r+')
+
+    soup = BeautifulSoup(source.read())
+
+    soup.find(id='megabladeContainer').decompose()
+    soup.find(id='ux-header').decompose()
+    soup.find(id='isd_print').decompose()
+    soup.find(id='isd_printABook').decompose()
+    soup.find(id='expandCollapseAll').decompose()
+    soup.find(id='leftNav').decompose()
+    soup.find_all('div', class_='feedbackContainer')[0].decompose()
+    soup.find(id='ux-footer').decompose()
+
+    source.seek(0)
+    source.write(str(soup))
+    source.truncate()
+    source.close()
+
