@@ -69,14 +69,47 @@ for entry in entries:
 
     soup = BeautifulSoup(source.read())
 
-    soup.find(id='megabladeContainer').decompose()
-    soup.find(id='ux-header').decompose()
-    soup.find(id='isd_print').decompose()
-    soup.find(id='isd_printABook').decompose()
-    soup.find(id='expandCollapseAll').decompose()
-    soup.find(id='leftNav').decompose()
-    soup.find_all('div', class_='feedbackContainer')[0].decompose()
-    soup.find(id='ux-footer').decompose()
+    try:
+        soup.find(id='megabladeContainer').decompose()
+    except AttributeError:
+        pass
+
+    try:
+        soup.find(id='ux-header').decompose()
+    except AttributeError:
+        pass
+
+    try:
+        soup.find(id='isd_print').decompose()
+    except AttributeError:
+        pass
+
+    try:
+        soup.find(id='isd_printABook').decompose()
+    except AttributeError:
+        pass
+
+    try:
+        soup.find(id='expandCollapseAll').decompose()
+    except AttributeError:
+        pass
+
+    try:
+        soup.find(id='leftNav').decompose()
+    except AttributeError:
+        pass
+
+    try:
+        soup.find_all('div', class_='feedbackContainer')[0].decompose()
+    except AttributeError:
+        pass
+    except IndexError:
+        pass
+
+    try:
+        soup.find(id='ux-footer').decompose()
+    except AttributeError:
+        pass
 
     source.seek(0)
     source.write(str(soup))
