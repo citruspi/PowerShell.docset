@@ -111,6 +111,10 @@ for entry in entries:
     except AttributeError:
         pass
 
+    for link in soup.find_all('a'):
+        if link.get_text() in entries:
+            link.attrs['href'] = link.get_text()+'.html'
+
     source.seek(0)
     source.write(str(soup))
     source.truncate()
