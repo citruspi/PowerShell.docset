@@ -2,6 +2,7 @@ from bs4 import BeautifulSoup
 import requests
 import shutil
 import os
+import sqlite3
 
 INDEX = 'https://technet.microsoft.com/en-us/library/jj821831%28v=sc.20%29.aspx'
 
@@ -29,3 +30,17 @@ for div in soup.find_all('div'):
 
     except KeyError:
         pass
+
+db = sqlite3.connect('cmdlet.docset/Contents/Resources/docSet.dsidx')
+cur = db.cursor()
+try: cur.execute('DROP TABLE searchIndex;')
+except: pass
+
+cur.execute('CREATE TABLE searchIndex(id INTEGER PRIMARY KEY, name TEXT, type TEXT, path TEXT);')
+cur.execute('CREATE UNIQUE INDEX anchor ON searchIndex (name, type, path);')
+
+for entry in entries:
+    insert = (entry, 'Command', entry+'.html')
+    cur.execute('insert into searchIndex(name, type, path) values (?,?,?)', insert)
+
+db.commit()
