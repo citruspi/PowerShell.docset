@@ -10,10 +10,18 @@ if os.path.exists('cmdlet.docset'):
     shutil.rmtree('cmdlet.docset')
 os.makedirs('cmdlet.docset/Contents/Resources/Documents/')
 
-page = requests.get(INDEX).content
-soup = BeautifulSoup(page)
+db = sqlite3.connect('cmdlet.docset/Contents/Resources/docSet.dsidx')
+cur = db.cursor()
+try: cur.execute('DROP TABLE searchIndex;')
+except: pass
+
+cur.execute('CREATE TABLE searchIndex(id INTEGER PRIMARY KEY, name TEXT, type TEXT, path TEXT);')
+cur.execute('CREATE UNIQUE INDEX anchor ON searchIndex (name, type, path);')
 
 entries = []
+
+page = requests.get(INDEX).content
+soup = BeautifulSoup(page)
 
 for div in soup.find_all('div'):
 
@@ -30,14 +38,6 @@ for div in soup.find_all('div'):
 
     except KeyError:
         pass
-
-db = sqlite3.connect('cmdlet.docset/Contents/Resources/docSet.dsidx')
-cur = db.cursor()
-try: cur.execute('DROP TABLE searchIndex;')
-except: pass
-
-cur.execute('CREATE TABLE searchIndex(id INTEGER PRIMARY KEY, name TEXT, type TEXT, path TEXT);')
-cur.execute('CREATE UNIQUE INDEX anchor ON searchIndex (name, type, path);')
 
 for entry in entries:
     insert = (entry, 'Command', entry+'.html')
