@@ -21,7 +21,7 @@ for div in soup.find_all('div'):
             link = div.a.attrs['href'].strip()
             title = div.a.attrs['title']
 
-            destination = open('build/'+title+'.html', 'w')
+            destination = open('cmdlet.docset/Contents/Resources/Documents/'+title+'.html', 'w')
             destination.write(requests.get(link).content)
             destination.close()
 
