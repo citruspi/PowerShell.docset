@@ -55,6 +55,8 @@ infoplist = """<?xml version="1.0" encoding="UTF-8"?>
     <string>CMDlet</string>
     <key>DocSetPlatformFamily</key>
     <string>cmdlet</string>
+    <key>dashIndexFilePath</key>
+    <string>index.html</string>
     <key>isDashDocset</key>
     <true/>
 </dict>
@@ -62,6 +64,12 @@ infoplist = """<?xml version="1.0" encoding="UTF-8"?>
 
 with open('cmdlet.docset/Contents/Info.plist', 'w') as f:
     f.write(infoplist)
+
+destination = open('cmdlet.docset/Contents/Resources/Documents/index.html', 'w')
+destination.write(requests.get(INDEX).content)
+destination.close()
+
+entries.append('index')
 
 for entry in entries:
 
