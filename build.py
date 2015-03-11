@@ -65,7 +65,7 @@ with open('cmdlet.docset/Contents/Info.plist', 'w') as f:
 
 for entry in entries:
 
-    source = open('cmdlet.docset/Contents/Resources/Documents/'+title+'.html', 'r+')
+    source = open('cmdlet.docset/Contents/Resources/Documents/'+entry+'.html', 'r+')
 
     soup = BeautifulSoup(source.read())
 
