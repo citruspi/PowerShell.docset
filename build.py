@@ -1,37 +1,11 @@
-from bs4 import BeautifulSoup 
+from bs4 import BeautifulSoup
+import yaml
 import requests
 import shutil
 import os
 import sqlite3
 
-indexes = [
-    # System Center Automation - App Controller
-    'https://technet.microsoft.com/en-us/library/jj899760(v=sc.20).aspx',
-    # System Center Automation - Configuration Manager
-    'https://technet.microsoft.com/en-us/library/jj821831%28v=sc.20%29.aspx',
-    # System Center Automation - Configuration Manager (Support Center)
-    'https://technet.microsoft.com/en-us/library/dn688184(v=sc.20).aspx',
-    # System Center Automation - Data Protection Manager
-    'https://technet.microsoft.com/en-us/library/hh881679(v=sc.20).aspx'
-    # System Center Automation - Microsoft Monitoring Agent
-    'https://technet.microsoft.com/en-us/library/dn472748(v=sc.20).aspx',
-    # System Center Automation - Operations Manager
-    'https://technet.microsoft.com/en-us/library/hh920227(v=sc.20).aspx',
-    # System Center Automation - Operations Manager (Linux and UNIX)
-    'https://technet.microsoft.com/en-us/library/hh545209(v=sc.20).aspx',
-    # System Center Automation - Operations Manager (System Center Advisor Connector)
-    'https://technet.microsoft.com/en-us/library/dn720227(v=sc.20).aspx',
-    # System Center Automation - Service Management Automation
-    'https://technet.microsoft.com/en-us/library/dn502585(v=sc.20).aspx',
-    # System Center Automation - Service Manager
-    'https://technet.microsoft.com/en-us/library/hh305227(v=sc.20).aspx',
-    # System Center Automation - Service Manager (Data Warehouse)
-    'https://technet.microsoft.com/en-us/library/hh541724(v=sc.20).aspx',
-    # System Center Automation - Service Provider Automation
-    'https://technet.microsoft.com/en-us/library/jj612525(v=sc.20).aspx',
-    # System Center Automation - Virtual Machine Manager
-    'https://technet.microsoft.com/en-us/library/jj654428(v=sc.20).aspx'
-]
+indexes = yaml.load(open('indexes.yaml', 'r').read())['cmdlet']
 
 if os.path.exists('cmdlet.docset'):
     shutil.rmtree('cmdlet.docset')
@@ -49,7 +23,7 @@ entries = []
 
 for index in indexes:
 
-    page = requests.get(index).content
+    page = requests.get(index['url']).content
     soup = BeautifulSoup(page)
 
     for div in soup.find_all('div'):
@@ -148,4 +122,3 @@ for entry in entries:
     source.write(str(soup))
     source.truncate()
     source.close()
-

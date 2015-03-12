@@ -1,0 +1,27 @@
+cmdlet:
+    - name: SystemCenterAutomationAppController
+      url: https://technet.microsoft.com/en-us/library/jj899760(v=sc.20).aspx
+    - name: SystemCenterAutomationConfigurationManager
+      url: https://technet.microsoft.com/en-us/library/jj821831%28v=sc.20%29.aspx
+    - name: SystemCenterAutomationConfiguration ManagerSupportCenter
+      url: https://technet.microsoft.com/en-us/library/dn688184(v=sc.20).aspx
+    - name: SystemCenterAutomationDataProtectionManager
+      url: https://technet.microsoft.com/en-us/library/hh881679(v=sc.20).aspx
+    - name: SystemCenterAutomationMicrosoftMonitoringAgent
+      url: https://technet.microsoft.com/en-us/library/dn472748(v=sc.20).aspx
+    - name: SystemCenterAutomationOperationsManager
+      url: https://technet.microsoft.com/en-us/library/hh920227(v=sc.20).aspx
+    - name: SystemCenterAutomationOperationsManagerLinuxAndUNIX
+      url: https://technet.microsoft.com/en-us/library/hh545209(v=sc.20).aspx
+    - name: SystemCenterAutomationOperationsManagerSystemCenterAdvisorConnector
+      url: https://technet.microsoft.com/en-us/library/dn720227(v=sc.20).aspx
+    - name: SystemCenterAutomationServiceManagementAutomation
+      url: https://technet.microsoft.com/en-us/library/dn502585(v=sc.20).aspx
+    - name: SystemCenterAutomationServiceManager
+      url: https://technet.microsoft.com/en-us/library/hh305227(v=sc.20).aspx
+    - name: SystemCenterAutomationServiceManagerDataWarehouse
+      url: https://technet.microsoft.com/en-us/library/hh541724(v=sc.20).aspx
+    - name: SystemCenterAutomationServiceProviderAutomation
+      url: https://technet.microsoft.com/en-us/library/jj612525(v=sc.20).aspx
+    - name: SystemCenterAutomationVirtualMachineManager
+      url: https://technet.microsoft.com/en-us/library/jj654428(v=sc.20).aspx
