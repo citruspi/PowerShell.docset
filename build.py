@@ -58,6 +58,7 @@ class DocSet(object):
             except Exception, e:
                 print 'Failed to download {entry}'.format(entry = entry.name)
                 print str(e)
+                self.entries.remove(entry)
 
         for entry in self.entries: entry.rewrite(self.entries)
         self.insert_entries()
