@@ -31,6 +31,210 @@ cmdlet:
       url: https://technet.microsoft.com/en-us/library/jj159432(v=wps.640).aspx
     - name: CoreModulesPowershellWorkflowUtility
       url: https://technet.microsoft.com/en-us/library/jj149816(v=wps.640).aspx
+    - name: WindowsAutomationActiveDirectoryCertificateServicesAdministration
+      url: https://technet.microsoft.com/en-us/library/hh848365.aspx
+    - name: WindowsAutomationActiveDirectoryCertificateServicesDeployment
+      url: https://technet.microsoft.com/en-us/library/hh848390.aspx
+    - name: WindowsAutomationActiveDirectoryDomainServicesAdministration
+      url: https://technet.microsoft.com/en-us/library/hh852274.aspx
+    - name: WindowsAutomationActiveDirectoryDomainServicesDeployment
+      url: https://technet.microsoft.com/en-us/library/hh974719.aspx
+    - name: WindowsAutomationActiveDirectoryFederationServices
+      url: https://technet.microsoft.com/en-us/library/dn479343.aspx
+    - name: WindowsAutomationActiveDirectoryRightsManagementServicesAdministration
+      url: https://technet.microsoft.com/en-us/library/jj714145.aspx
+    - name: WindowsAutomationActiveDirectoryRightsManagementServicesDeployment
+      url: https://technet.microsoft.com/en-us/library/jj714128.aspx
+    - name: WindowsAutomationAppBackgroundTask
+      url: https://technet.microsoft.com/en-us/library/dn296421.aspx
+    - name: WindowsAutomationAppLocker
+      url: https://technet.microsoft.com/en-us/library/hh847210.aspx
+    - name: WindowsAutomationAppxModule
+      url: https://technet.microsoft.com/en-us/library/dn448373.aspx
+    - name: WindowsAutomationAssignedAccess
+      url: https://technet.microsoft.com/en-us/library/dn336438.aspx
+    - name: WindowsAutomationBestPracticesAnalyzer
+      url: https://technet.microsoft.com/en-us/library/hh868084.aspx
+    - name: WindowsAutomationBitLocker
+      url: https://technet.microsoft.com/en-us/library/jj649829.aspx
+    - name: WindowsAutomationBackgroundIntelligentTransfer
+      url: https://technet.microsoft.com/en-us/library/jj590836.aspx
+    - name: WindowsAutomationBranchCache
+      url: https://technet.microsoft.com/en-us/library/hh848392.aspx
+    - name: WindowsAutomationCommonInformationModel
+      url: https://technet.microsoft.com/en-us/library/jj553783.aspx
+    - name: WindowsAutomationMicrosoftAzureManagementAgentStorSimple
+      url: https://technet.microsoft.com/en-us/library/dn715784.aspx
+    - name: WindowsAutomationClusterAwareUpdating
+      url: https://technet.microsoft.com/en-us/library/hh847221.aspx
+    - name: WindowsAutomationDataCenterBridgingQualityOfService
+      url: https://technet.microsoft.com/en-us/library/hh967440.aspx
+    - name: WindowsAutomationDeduplication
+      url: https://technet.microsoft.com/en-us/library/hh848450.aspx
+    - name: WindowsAutomationDefender
+      url: https://technet.microsoft.com/en-us/library/dn433280(v=wps.640).aspx
+    - name: WindowsAutomationDeploymentImagingServicingManagement
+      url: https://technet.microsoft.com/en-us/library/dn376474.aspx
+    - name: WindowsAutomationDistributedFileSystemNamespace
+      url: https://technet.microsoft.com/en-us/library/jj884270.aspx
+    - name: WindowsAutomationDistributedFileSystemReplication
+      url: https://technet.microsoft.com/en-us/library/dn296591(v=wps.640).aspx
+    - name: WindowsAutomationDynamicHostConfigurationProtocol
+      url: https://technet.microsoft.com/en-us/library/jj590751.aspx
+    - name: WindowsAutomationDirectAccessClient
+      url: https://technet.microsoft.com/en-us/library/hh848426.aspx
+    - name: WindowsAutomationDistributedTransactionCoordinator
+      url: https://technet.microsoft.com/en-us/library/dn464259.aspx
+    - name: WindowsAutomationDomainNameSystemClient
+      url: https://technet.microsoft.com/en-us/library/jj590772.aspx
+    - name: WindowsAutomationDomainNameSystemServer
+      url: https://technet.microsoft.com/en-us/library/jj649850.aspx
+    - name: WindowsAutomationFailoverClusters
+      url: https://technet.microsoft.com/en-us/library/hh847239.aspx
+    - name: WindowsAutomationFileServerResourceManager
+      url: https://technet.microsoft.com/en-us/library/jj900651.aspx
+    - name: WindowsAutomationGroupPolicy
+      url: https://technet.microsoft.com/en-us/library/hh967461.aspx
+    - name: WindowsAutomationHardwareCertification
+      url: https://technet.microsoft.com/en-us/library/dn296620.aspx
+    - name: WindowsAutomationStorSimpleHybridCloudService
+      url: https://technet.microsoft.com/en-us/library/dn688168.aspx
+    - name: WindowsAutomationHyperV
+      url: https://technet.microsoft.com/en-us/library/hh848559.aspx
+    - name: WindowsAutomationInternationalSettings
+      url: https://technet.microsoft.com/en-us/library/dn375327.aspx
+    - name: WindowsAutomationIPAddressManagementServer
+      url: https://technet.microsoft.com/en-us/library/jj553807.aspx
+    - name: WindowsAutomationiSCSIInitiator
+      url: https://technet.microsoft.com/en-us/library/hh826099.aspx
+    - name: WindowsAutomationiSCSITarget
+      url: https://technet.microsoft.com/en-us/library/jj612803.aspx
+    - name: WindowsAutomationKeyDistributionServer
+      url: https://technet.microsoft.com/en-us/library/jj852115.aspx
+    - name: WindowsAutomationMemoryManagementAgent
+      url: https://technet.microsoft.com/en-us/library/jj658955.aspx
+    - name: WindowsAutomationMessageAnalyzer
+      url: https://technet.microsoft.com/en-us/library/dn456518.aspx
+    - name: WindowsAutomationMicrosoftMessageQueuing
+      url: https://technet.microsoft.com/en-us/library/dn391735.aspx
+    - name: WindowsAutomationMicrosoftEventTracingManagement
+      url: https://technet.microsoft.com/en-us/library/dn919247(v=wps.640).aspx
+    - name: WindowsAutomationMultiPathIO
+      url: https://technet.microsoft.com/en-us/library/hh826113.aspx
+    - name: WindowsAutomationNetTCIP
+      url: https://technet.microsoft.com/en-us/library/hh826123.aspx
+    - name: WindowsAutomationNetworkAdapter
+      url: https://technet.microsoft.com/en-us/library/jj134956.aspx
+    - name: WindowsAutomationNetworkAddressTranslation
+      url: https://technet.microsoft.com/en-us/library/dn283352.aspx
+    - name: WindowsAutomationNetworkConnection
+      url: https://technet.microsoft.com/en-us/library/jj899568.aspx
+    - name: WindowsAutomationNetworkConnectivityStatus
+      url: https://technet.microsoft.com/en-us/library/hh848620.aspx
+    - name: WindowsAutomationNetworkEventPacketCapture
+      url: https://technet.microsoft.com/en-us/library/dn268520.aspx
+    - name: WindowsAutomationNetworkLoadBalancing
+      url: https://technet.microsoft.com/en-us/library/hh801274.aspx
+    - name: WindowsAutomationNetworkPolicyServer
+      url: https://technet.microsoft.com/en-us/library/jj872739(v=wps.640).aspx
+    - name: WindowsAutomationNetworkQualityOfService
+      url: https://technet.microsoft.com/en-us/library/hh967469.aspx
+    - name: WindowsAutomationNetworkSecurity
+      url: https://technet.microsoft.com/en-us/library/jj554906.aspx
+    - name: WindowsAutomationNetworkSwitchTeam
+      url: https://technet.microsoft.com/en-us/library/jj553812.aspx
+    - name: WindowsAutomationNetworkTransition
+      url: https://technet.microsoft.com/en-us/library/jj613685.aspx
+    - name: WindowsAutomationNetworkVirtualization
+      url: https://technet.microsoft.com/en-us/library/jj884262.aspx
+    - name: WindowsAutomationNetworkFileSystem
+      url: https://technet.microsoft.com/en-us/library/jj603081.aspx
+    - name: WindowsAutomationNICTeaming
+      url: https://technet.microsoft.com/en-us/library/jj130849.aspx
+    - name: WindowsAutomationPhysicalComputerSystemViewDevice
+      url: https://technet.microsoft.com/en-us/library/dn283380(v=wps.640).aspx
+    - name: WindowsAutomationPrintManagement
+      url: https://technet.microsoft.com/en-us/library/hh918357.aspx
+    - name: WindowsAutomationPublicKeyInfrastructureClient
+      url: https://technet.microsoft.com/en-us/library/hh848636.aspx
+    - name: WindowsAutomationRemoteAccess
+      url: https://technet.microsoft.com/en-us/library/hh918399.aspx
+    - name: WindowsAutomationRemoteDesktop
+      url: https://technet.microsoft.com/en-us/library/jj215451.aspx
+    - name: WindowsAutomationRemoteDesktopServices
+      url: https://technet.microsoft.com/en-us/library/dn296651.aspx
+    - name: WindowsAutomationScheduledTasks
+      url: https://technet.microsoft.com/en-us/library/jj649816.aspx
+    - name: WindowsAutomationSecureBoot
+      url: https://technet.microsoft.com/en-us/library/jj603042.aspx
+    - name: WindowsAutomationServerCore
+      url: https://technet.microsoft.com/en-us/library/jj603038.aspx
+    - name: WindowsAutomationServerManager
+      url: https://technet.microsoft.com/en-us/library/jj205465.aspx
+    - name: WindowsAutomationServerManagerTasks
+      url: https://technet.microsoft.com/en-us/library/jj635694.aspx
+    - name: WindowsAutomationServerMigration
+      url: https://technet.microsoft.com/en-us/library/jj852154.aspx
+    - name: WindowsAutomationServerMessageBlockShare
+      url: https://technet.microsoft.com/en-us/library/jj635726.aspx
+    - name: WindowsAutomationServerMessageBlockWitness
+      url: https://technet.microsoft.com/en-us/library/jj599731.aspx
+    - name: WindowsAutomationSMISConfig
+      url: https://technet.microsoft.com/en-us/library/jj884239.aspx
+    - name: WindowsAutomationSoftwareInventoryLogging
+      url: https://technet.microsoft.com/en-us/library/dn283390.aspx
+    - name: WindowsAutomationStartScreen
+      url: https://technet.microsoft.com/en-us/library/dn283399.aspx
+    - name: WindowsAutomationStorage
+      url: https://technet.microsoft.com/en-us/library/hh848705.aspx
+    - name: WindowsAutomationStorageSpaces
+      url: https://technet.microsoft.com/en-us/library/jj851254.aspx
+    - name: WindowsAutomationSyncShare
+      url: https://technet.microsoft.com/en-us/library/dn296644.aspx
+    - name: WindowsAutomationTroubleshootingPack
+      url: https://technet.microsoft.com/en-us/library/jj590831.aspx
+    - name: WindowsAutomationTLS
+      url: https://technet.microsoft.com/en-us/library/dn296632.aspx
+    - name: WindowsAutomationTrustedPlatformModule
+      url: https://technet.microsoft.com/en-us/library/jj603116.aspx
+    - name: WindowsAutomationUserAccessLogging
+      url: https://technet.microsoft.com/en-us/library/jj603125.aspx
+    - name: WindowsAutomationVolumeActivationManagementTool
+      url: https://technet.microsoft.com/en-us/library/dn375629.aspx
+    - name: WindowsAutomationVPNClient
+      url: https://technet.microsoft.com/en-us/library/jj554820.aspx
+    - name: WindowsAutomationWebApplicationProxy
+      url: https://technet.microsoft.com/en-us/library/dn283404.aspx
+    - name: WindowsAutomationWebServerAdministration
+      url: https://technet.microsoft.com/en-us/library/hh867899.aspx
+    - name: WindowsAutomationWindowsAssessmentServices
+      url: https://technet.microsoft.com/en-us/library/dn376182.aspx
+    - name: WindowsAutomationWindowsAzureOnlineBackup
+      url: https://technet.microsoft.com/en-us/library/hh770400.aspx
+    - name: WindowsAutomationWindowsDataAccessComponents
+      url: https://technet.microsoft.com/en-us/library/hh771019.aspx
+    - name: WindowsAutomationWindowsDefender
+      url: https://technet.microsoft.com/en-us/library/dn433280.aspx
+    - name: WindowsAutomationWindowsDeploymentServices
+      url: https://technet.microsoft.com/en-us/library/dn283416.aspx
+    - name: WindowsAutomationWindowsDeveloperLicense
+      url: https://technet.microsoft.com/en-us/library/jj657534.aspx
+    - name: WindowsAutomationWindowsErrorReporting
+      url: https://technet.microsoft.com/en-us/library/jj590827.aspx
+    - name: WindowsAutomationWindowsHardwareErrorArchitecture
+      url: https://technet.microsoft.com/en-us/library/dn367233.aspx
+    - name: WindowsAutomationWindowsPowerShellWebAccess
+      url: https://technet.microsoft.com/en-us/library/jj592887.aspx
+    - name: WindowsAutomationWindowsSearch
+      url: https://technet.microsoft.com/en-us/library/dn296654.aspx
+    - name: WindowsAutomationWindowsServerBackup
+      url: https://technet.microsoft.com/en-us/library/jj902428.aspx
+    - name: WindowsAutomationWindowsServerEssentials
+      url: https://technet.microsoft.com/en-us/library/dn205088.aspx
+    - name: WindowsAutomationWindowsServerEssentialsSetup
+      url: https://technet.microsoft.com/en-us/library/dn376325.aspx
+    - name: WindowsAutomationWindowsServerUpdateServices
+      url: https://technet.microsoft.com/en-us/library/hh826166.aspx
     - name: SystemCenterAutomationAppController
       url: https://technet.microsoft.com/en-us/library/jj899760(v=sc.20).aspx
     - name: SystemCenterAutomationConfigurationManager
