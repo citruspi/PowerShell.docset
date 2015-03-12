@@ -4,7 +4,10 @@ import shutil
 import os
 import sqlite3
 
-INDEX = 'https://technet.microsoft.com/en-us/library/jj821831%28v=sc.20%29.aspx'
+indexes = [
+    # System Center Automation - Configuration Manager
+    'https://technet.microsoft.com/en-us/library/jj821831%28v=sc.20%29.aspx',
+]
 
 if os.path.exists('cmdlet.docset'):
     shutil.rmtree('cmdlet.docset')
@@ -20,24 +23,26 @@ cur.execute('CREATE UNIQUE INDEX anchor ON searchIndex (name, type, path);')
 
 entries = []
 
-page = requests.get(INDEX).content
-soup = BeautifulSoup(page)
+for index in indexes:
 
-for div in soup.find_all('div'):
+    page = requests.get(index).content
+    soup = BeautifulSoup(page)
 
-    try:
-        if div['data-toclevel'] == '2':
-            link = div.a.attrs['href'].strip()
-            title = div.a.attrs['title']
+    for div in soup.find_all('div'):
 
-            destination = open('cmdlet.docset/Contents/Resources/Documents/'+title+'.html', 'w')
-            destination.write(requests.get(link).content)
-            destination.close()
+        try:
+            if div['data-toclevel'] == '2':
+                link = div.a.attrs['href'].strip()
+                title = div.a.attrs['title']
 
-            entries.append(title)
+                destination = open('cmdlet.docset/Contents/Resources/Documents/'+title+'.html', 'w')
+                destination.write(requests.get(link).content)
+                destination.close()
 
-    except KeyError:
-        pass
+                entries.append(title)
+
+        except KeyError:
+            pass
 
 for entry in entries:
     insert = (entry, 'Command', entry+'.html')
