@@ -44,24 +44,6 @@ for entry in entries:
 
 db.commit()
 
-infoplist = """<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<plist version="1.0">
-<dict>
-    <key>CFBundleIdentifier</key>
-    <string>powershell</string>
-    <key>CFBundleName</key>
-    <string>PowerShell</string>
-    <key>DocSetPlatformFamily</key>
-    <string>powershell</string>
-    <key>isDashDocset</key>
-    <true/>
-</dict>
-</plist>"""
-
-with open('PowerShell.docset/Contents/Info.plist', 'w') as f:
-    f.write(infoplist)
-
 for entry in entries:
 
     source = open('PowerShell.docset/Contents/Resources/Documents/'+entry+'.html', 'r+')
