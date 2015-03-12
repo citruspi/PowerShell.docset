@@ -57,3 +57,17 @@ class Entry(object):
         self.type_ = type_
         self.url = url
         self.docset = docset
+
+    @property
+    def path(self):
+
+        return '{name}.html'.format(name = self.name)
+
+    @property
+    def full_path(self):
+
+        return '{docset}.docset/Contents/Resources/Documents/{name}.html'.format(
+                                                    docset = self.docset.name,
+                                                    name = self.name)
+
+      
