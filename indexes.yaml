@@ -235,6 +235,20 @@ cmdlet:
       url: https://technet.microsoft.com/en-us/library/dn376325.aspx
     - name: WindowsAutomationWindowsServerUpdateServices
       url: https://technet.microsoft.com/en-us/library/hh826166.aspx
+    - name: MicrosoftDesktopOptimizationPackAutomationMicrosoftApplicationVirtualizationAppVClient
+      url: https://technet.microsoft.com/en-us/library/dn879387.aspx
+    - name: MicrosoftDesktopOptimizationPackAutomationMicrosoftApplicationVirtualizationAppVServer
+      url: https://technet.microsoft.com/en-us/library/dn879376.aspx
+    - name: MicrosoftDesktopOptimizationPackAutomationMicrosoftApplicationVirtualizationAppVSequencer
+      url: https://technet.microsoft.com/en-us/library/dn879422.aspx
+    - name: MicrosoftDesktopOptimizationPackAutomationMicrosoftBitlockerAdministrationAndMonitoring
+      url: https://technet.microsoft.com/en-us/library/dn459018.aspx
+    - name: MicrosoftDesktopOptimizationPackAutomationMicrosoftEnterpriseDesktopVirtualizationMEDV
+      url: https://technet.microsoft.com/en-us/library/gg680276.aspx
+    - name: MicrosoftDesktopOptimizationPackAutomationMicrosoftEnterpriseDesktopVirtualizationMEDVWorkspace
+      url: https://technet.microsoft.com/en-us/library/gg680280.aspx
+    - name: MicrosoftDesktopOptimizationPackAutomationUserExperienceVirtualization
+      url: https://technet.microsoft.com/en-us/library/dn520275.aspx
     - name: SystemCenterAutomationAppController
       url: https://technet.microsoft.com/en-us/library/jj899760(v=sc.20).aspx
     - name: SystemCenterAutomationConfigurationManager
