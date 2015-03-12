@@ -68,7 +68,7 @@ class Entry(object):
 
     def download(self):
 
-        r = requests.get(link)
+        r = requests.get(self.url)
 
         if r.status_code == 200:
 
