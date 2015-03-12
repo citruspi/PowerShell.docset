@@ -142,6 +142,8 @@ class Entry(object):
         source.truncate()
         source.close()
 
+        print 'Finished rewriting {entry}'.format(entry = self.name)
+
 if __name__ == '__main__':
 
     start = timeit.default_timer()
