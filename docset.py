@@ -18,7 +18,7 @@ class DocSet(object):
 
         database = sqlite3.connect(path)
 
-        cursor = db.cursor()
+        cursor = database.cursor()
 
         try: cursor.execute('DROP TABLE searchIndex;')
         except: pass
@@ -35,7 +35,7 @@ class DocSet(object):
 
         database = sqlite3.connect(path)
 
-        cursor = db.cursor()
+        cursor = database.cursor()
 
         inserts = []
 
