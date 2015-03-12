@@ -152,23 +152,25 @@ if __name__ == '__main__':
 
     for index in indexes:
 
-        page = requests.get(index['url']).content
-        soup = BeautifulSoup(page)
+        r = requests.get(index['url'])
 
-        group = index['name']
+        if r.status_code == 200:
 
-        for div in soup.find_all('div'):
+            soup = BeautifulSoup(r.content)
+            group = index['name']
 
-            try:
-                if div['data-toclevel'] == '2':
-                    link = div.a.attrs['href'].strip()
-                    title = div.a.attrs['title']
+            for div in soup.find_all('div'):
 
-                    docset.entries.append(
-                        Entry(title, group+'-'+title+'.html', 'Command', link, docset))
+                try:
+                    if div['data-toclevel'] == '2':
+                        link = div.a.attrs['href'].strip()
+                        title = div.a.attrs['title']
 
-            except KeyError:
-                pass
+                        docset.entries.append(
+                            Entry(title, group+'-'+title+'.html', 'Command', link, docset))
+
+                except KeyError:
+                    pass
 
     docset.create()
 
