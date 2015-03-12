@@ -1,4 +1,6 @@
 import sqlite3
+import requests
+from bs4 import BeautifulSoup
 
 class DocSet(object):
 
@@ -81,3 +83,49 @@ class Entry(object):
             raise Exception('Received "{code}" when downloading "{name}"'.format(
                                                         code = r.status_code,
                                                         name = self.name))
+
+    def rewrite(self, entries):
+
+        source = open(self.full_path, 'r+')
+
+        soup = BeautifulSoup(source.read())
+
+        unnecessary = [
+            '#megabladeContainer',
+            '#ux-header',
+            '#isd_print',
+            '#isd_printABook',
+            '#expandCollapseAll',
+            '#leftNav',
+            '.feedbackContainer',
+            '#isd_printABook',
+            '.communityContentContainer',
+            '#ux-footer'
+        ]
+
+        for u in unnecessary:
+
+            if u[0] == '#':
+
+                try:
+                    soup.find(id=u).decompose()
+                except AttributeError:
+                    pass
+
+            elif u[0] == '.':
+
+                for element in soup.find_all('div', class_=u):
+                    element.decompose()
+
+        for link in soup.find_all('a'):
+            for entry in entries:
+                try:
+                    if link.attrs['href'] == entry.url:
+                        link.attrs['href'] = entry.path
+                except KeyError:
+                    pass
+
+        source.seek(0)
+        source.write(str(soup))
+        source.truncate()
+        source.close()
