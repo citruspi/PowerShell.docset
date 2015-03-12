@@ -4,16 +4,11 @@ import requests
 import shutil
 import os
 import sqlite3
+from docset import DocSet
 
 indexes = yaml.load(open('indexes.yaml', 'r').read())['cmdlet']
 
-db = sqlite3.connect('PowerShell.docset/Contents/Resources/docSet.dsidx')
-cur = db.cursor()
-try: cur.execute('DROP TABLE searchIndex;')
-except: pass
-
-cur.execute('CREATE TABLE searchIndex(id INTEGER PRIMARY KEY, name TEXT, type TEXT, path TEXT);')
-cur.execute('CREATE UNIQUE INDEX anchor ON searchIndex (name, type, path);')
+docset = DocSet('PowerShell')
 
 entries = []
 
@@ -42,14 +37,16 @@ for index in indexes:
                                 'path': 'PowerShell.docset/Contents/Resources/Documents/'+index['name']+'/'+title+'.html'
                                })
 
+                print 'Downloaded %s/%s' % (index['name'],title)
+
         except KeyError:
             pass
 
-for entry in entries:
-    insert = (entry['name'], 'Command', entry['group']+'/'+entry['name']+'.html')
-    cur.execute('insert into searchIndex(name, type, path) values (?,?,?)', insert)
+print 'Finished downloading'
 
-db.commit()
+docset.insert_entries(entries)
+
+print 'Inserted documents'
 
 for entry in entries:
 
