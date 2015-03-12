@@ -22,6 +22,9 @@ for index in indexes:
     page = requests.get(index['url']).content
     soup = BeautifulSoup(page)
 
+    if not os.exists('PowerShell.docset/Contents/Resources/Documents/'+index['name']):
+        os.mkdir('PowerShell.docset/Contents/Resources/Documents/'+index['name'])
+
     for div in soup.find_all('div'):
 
         try:
@@ -29,7 +32,7 @@ for index in indexes:
                 link = div.a.attrs['href'].strip()
                 title = div.a.attrs['title']
 
-                destination = open('PowerShell.docset/Contents/Resources/Documents/'+title+'.html', 'w')
+                destination = open('PowerShell.docset/Contents/Resources/Documents/'+index['name']+'/'+title+'.html', 'w')
                 destination.write(requests.get(link).content)
                 destination.close()
 
