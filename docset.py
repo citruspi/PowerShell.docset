@@ -79,3 +79,9 @@ class Entry(object):
             with open(self.full_path, 'w') as f:
 
                 f.write(r.content)
+
+        else:
+
+            raise Exception('Received "{code}" when downloading "{name}"'.format(
+                                                        code = r.status_code,
+                                                        name = self.name))
