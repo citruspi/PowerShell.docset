@@ -172,6 +172,14 @@ if __name__ == '__main__':
                 except KeyError:
                     pass
 
+            print 'Finished indexing {index}'.format(index = index['name'])
+
+        else:
+
+            print 'Failed to index {index} ({code})'.format(
+                                        index = index['name'],
+                                        code = r.status_code)
+
     docset.create()
 
     stop = timeit.default_timer()
