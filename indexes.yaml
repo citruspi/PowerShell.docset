@@ -275,3 +275,13 @@ cmdlet:
       url: https://technet.microsoft.com/en-us/library/jj612525(v=sc.20).aspx
     - name: SystemCenterAutomationVirtualMachineManager
       url: https://technet.microsoft.com/en-us/library/jj654428(v=sc.20).aspx
+    - name: WindowsAzurePackAutomationWindowsAzurePackConfiguration
+      url: https://technet.microsoft.com/en-us/library/dn520975(v=sc.20).aspx
+    - name: WindowsAzurePackAutomationWindowsAzurePackAdministration
+      url: https://technet.microsoft.com/en-us/library/dn520911(v=sc.20).aspx
+    - name: WindowsAzurePackAutomationWindowsAzurePackSQLServer
+      url: https://technet.microsoft.com/en-us/library/dn450954(v=sc.20).aspx
+    - name: WindowsAzurePackAutomationWindowsAzurePackMySQL
+      url: https://technet.microsoft.com/en-us/library/dn464033(v=sc.20).aspx
+    - name: WindowsAzurePackAutomationWindowsAzureWebSites
+      url: https://technet.microsoft.com/en-us/library/dn464055(v=sc.20).aspx
