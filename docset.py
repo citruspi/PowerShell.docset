@@ -48,3 +48,12 @@ class DocSet(object):
 
         database.commit()
         database.close()
+
+class Entry(object):
+
+    def __init__(self, name, type_, url, docset):
+
+        self.name = name
+        self.type_ = type_
+        self.url = url
+        self.docset = docset
