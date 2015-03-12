@@ -91,6 +91,13 @@ for entry in entries:
         pass
 
     try:
+        soup.find_all('div', class_='communityContentContainer')[0].decompose()
+    except AttributeError:
+        pass
+    except IndexError:
+        pass
+
+    try:
         soup.find(id='ux-footer').decompose()
     except AttributeError:
         pass
