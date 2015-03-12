@@ -36,20 +36,24 @@ for index in indexes:
                 destination.write(requests.get(link).content)
                 destination.close()
 
-                entries.append(title)
+                entries.append({
+                                'name': title,
+                                'group': index['name'],
+                                'path': 'PowerShell.docset/Contents/Resources/Documents/'+index['name']+'/'+title+'.html'
+                               })
 
         except KeyError:
             pass
 
 for entry in entries:
-    insert = (entry, 'Command', entry+'.html')
+    insert = (entry['name'], 'Command', entry['group']+'/'+entry['name']+'.html')
     cur.execute('insert into searchIndex(name, type, path) values (?,?,?)', insert)
 
 db.commit()
 
 for entry in entries:
 
-    source = open('PowerShell.docset/Contents/Resources/Documents/'+entry+'.html', 'r+')
+    source = open(entry['path'], 'r+')
 
     soup = BeautifulSoup(source.read())
 
@@ -103,8 +107,9 @@ for entry in entries:
         pass
 
     for link in soup.find_all('a'):
-        if link.get_text() in entries:
-            link.attrs['href'] = link.get_text()+'.html'
+        for entry in entries:
+            if entry['name'] == link.get_text():
+                link.attrs['href'] = '../' + entry['group']+'/'+entry['name']+'.html'
 
     source.seek(0)
     source.write(str(soup))
