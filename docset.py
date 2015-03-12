@@ -8,6 +8,7 @@ class DocSet(object):
 
         self.name = name
         self.init_db()
+        self.entries = []
 
     @property
     def path(self):
@@ -31,7 +32,7 @@ class DocSet(object):
         database.commit()
         database.close()
 
-    def insert_entries(self, entries):
+    def insert_entries(self):
 
         path = '{path}/Contents/Resources/docSet.dsidx'.format(path = self.path)
 
@@ -39,7 +40,7 @@ class DocSet(object):
 
         cursor = database.cursor()
 
-        inserts = [(entry.name, entry.type_, entry.path) for entry in entries]
+        inserts = [(entry.name, entry.type_, entry.path) for entry in self.entries]
 
         cursor.executemany('insert into searchIndex(name, type, path) values (?,?,?)', inserts)
 
