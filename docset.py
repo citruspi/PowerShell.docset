@@ -28,3 +28,23 @@ class DocSet(object):
 
         database.commit()
         database.close()
+
+    def insert_entries(self, entries):
+
+        path = '{path}/Contents/Resources/docSet.dsidx'.format(path = self.path)
+
+        database = sqlite3.connect(path)
+
+        cursor = db.cursor()
+
+        inserts = []
+
+        for e in entries:
+
+            inserts.append(
+                (e['name'], 'Command', e['group']+'/'+e['name']+'.html'))
+
+        cursor.executemany('insert into searchIndex(name, type, path) values (?,?,?)', inserts)
+
+        database.commit()
+        database.close()
