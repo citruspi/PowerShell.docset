@@ -47,6 +47,12 @@ class DocSet(object):
         database.commit()
         database.close()
 
+    def create(self):
+
+        for entry in self.entries: entry.download()
+        for entry in self.entries: entry.rewrite(self.entries)
+        self.insert_entries()
+
 class Entry(object):
 
     def __init__(self, name, path, type_, url, docset):

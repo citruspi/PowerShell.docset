@@ -27,8 +27,4 @@ for index in indexes:
         except KeyError:
             pass
 
-for entry in docset.entries: entry.download()
-
-docset.insert_entries()
-
-for entry in docset.entries: entry.rewrite(entries)
+docset.create()
