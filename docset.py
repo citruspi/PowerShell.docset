@@ -39,12 +39,7 @@ class DocSet(object):
 
         cursor = database.cursor()
 
-        inserts = []
-
-        for e in entries:
-
-            inserts.append(
-                (e['name'], 'Command', e['group']+'/'+e['name']+'.html'))
+        inserts = [(entry.name, entry.type_, entry.path) for entry in entries]
 
         cursor.executemany('insert into searchIndex(name, type, path) values (?,?,?)', inserts)
 
