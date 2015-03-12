@@ -268,7 +268,9 @@ cmdlet:
     - name: SystemCenterAutomationServiceManagementAutomation
       url: https://technet.microsoft.com/en-us/library/dn502585(v=sc.20).aspx
     - name: SystemCenterAutomationServiceManager
-      url: https://technet.microsoft.com/en-us/library/hh305227(v=sc.20).aspx
+      url: https://technet.microsoft.com/en-us/library/hh316277(v=sc.20).aspx
+    - name: SystemCenterAutomationServiceManager
+      url: https://technet.microsoft.com/en-us/library/hh316206(v=sc.20).aspx
     - name: SystemCenterAutomationServiceManagerDataWarehouse
       url: https://technet.microsoft.com/en-us/library/hh541724(v=sc.20).aspx
     - name: SystemCenterAutomationServiceProviderAutomation
