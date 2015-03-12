@@ -59,9 +59,9 @@ class Entry(object):
     @property
     def full_path(self):
 
-        return '{docset}.docset/Contents/Resources/Documents/{name}.html'.format(
-                                                    docset = self.docset.name,
-                                                    name = self.name)
+        return '{docset}/Contents/Resources/Documents/{path}'.format(
+                                                    docset = self.docset.path,
+                                                    path = self.path)
 
     def download(self):
 
