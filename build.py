@@ -7,11 +7,11 @@ import sqlite3
 
 indexes = yaml.load(open('indexes.yaml', 'r').read())['cmdlet']
 
-if os.path.exists('cmdlet.docset'):
-    shutil.rmtree('cmdlet.docset')
-os.makedirs('cmdlet.docset/Contents/Resources/Documents/')
+if os.path.exists('powershell.docset'):
+    shutil.rmtree('powershell.docset')
+os.makedirs('powershell.docset/Contents/Resources/Documents/')
 
-db = sqlite3.connect('cmdlet.docset/Contents/Resources/docSet.dsidx')
+db = sqlite3.connect('powershell.docset/Contents/Resources/docSet.dsidx')
 cur = db.cursor()
 try: cur.execute('DROP TABLE searchIndex;')
 except: pass
@@ -33,7 +33,7 @@ for index in indexes:
                 link = div.a.attrs['href'].strip()
                 title = div.a.attrs['title']
 
-                destination = open('cmdlet.docset/Contents/Resources/Documents/'+title+'.html', 'w')
+                destination = open('powershell.docset/Contents/Resources/Documents/'+title+'.html', 'w')
                 destination.write(requests.get(link).content)
                 destination.close()
 
@@ -53,22 +53,22 @@ infoplist = """<?xml version="1.0" encoding="UTF-8"?>
 <plist version="1.0">
 <dict>
     <key>CFBundleIdentifier</key>
-    <string>cmdlet</string>
+    <string>powershell</string>
     <key>CFBundleName</key>
-    <string>CMDlet</string>
+    <string>PowerShell</string>
     <key>DocSetPlatformFamily</key>
-    <string>cmdlet</string>
+    <string>powershell</string>
     <key>isDashDocset</key>
     <true/>
 </dict>
 </plist>"""
 
-with open('cmdlet.docset/Contents/Info.plist', 'w') as f:
+with open('powershell.docset/Contents/Info.plist', 'w') as f:
     f.write(infoplist)
 
 for entry in entries:
 
-    source = open('cmdlet.docset/Contents/Resources/Documents/'+entry+'.html', 'r+')
+    source = open('powershell.docset/Contents/Resources/Documents/'+entry+'.html', 'r+')
 
     soup = BeautifulSoup(source.read())
 
