@@ -51,7 +51,14 @@ class DocSet(object):
 
     def create(self):
 
-        for entry in self.entries: entry.download()
+        for entry in list(self.entries):
+            try:
+                entry.download()
+                print 'Downloaded {entry}'.format(entry = entry.name)
+            except Exception, e:
+                print 'Failed to download {entry}'.format(entry = entry.name)
+                print str(e)
+
         for entry in self.entries: entry.rewrite(self.entries)
         self.insert_entries()
 
