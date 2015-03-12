@@ -1,4 +1,36 @@
 cmdlet:
+    - name: CoreModulesArchive
+      url: https://technet.microsoft.com/en-us/library/dn841357(v=wps.640).aspx
+    - name: CoreModulesCore
+      url: https://technet.microsoft.com/en-us/library/hh849695(v=wps.640).aspx
+    - name: CoreModulesDiagnostic
+      url: https://technet.microsoft.com/en-us/library/hh849684(v=wps.640).aspx
+    - name: CoreModulesHost
+      url: https://technet.microsoft.com/en-us/library/hh849689(v=wps.640).aspx
+    - name: CoreModulesManagement
+      url: https://technet.microsoft.com/en-us/library/hh849827(v=wps.640).aspx
+    - name: CoreModulesODataUtils
+      url: https://technet.microsoft.com/en-us/library/dn818506(v=wps.640).aspx
+    - name: CoreModulesSecurity
+      url: https://technet.microsoft.com/en-us/library/hh849807(v=wps.640).aspx
+    - name: CoreModulesUtility
+      url: https://technet.microsoft.com/en-us/library/hh849958(v=wps.640).aspx
+    - name: CoreModulesWSMan
+      url: https://technet.microsoft.com/en-us/library/hh849876(v=wps.640).aspx
+    - name: CoreModulesISE
+      url: https://technet.microsoft.com/en-us/library/jj149815(v=wps.640).aspx
+    - name: CoreModulesOneGet
+      url: https://technet.microsoft.com/en-us/library/dn890706(v=wps.640).aspx
+    - name: CoreModulesPowershellGet
+      url: https://technet.microsoft.com/en-us/library/dn807169(v=wps.640).aspx
+    - name: CoreModulesPowershellDesiredStateConfiguration
+      url: https://technet.microsoft.com/en-us/library/dn521624.aspx
+    - name: CoreModulesPowershellScheduledJob
+      url: https://technet.microsoft.com/en-us/library/hh849778(v=wps.640).aspx
+    - name: CoreModulesPowershellWorkflow
+      url: https://technet.microsoft.com/en-us/library/jj159432(v=wps.640).aspx
+    - name: CoreModulesPowershellWorkflowUtility
+      url: https://technet.microsoft.com/en-us/library/jj149816(v=wps.640).aspx
     - name: SystemCenterAutomationAppController
       url: https://technet.microsoft.com/en-us/library/jj899760(v=sc.20).aspx
     - name: SystemCenterAutomationConfigurationManager
