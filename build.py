@@ -2,6 +2,7 @@ from bs4 import BeautifulSoup
 import yaml
 import requests
 import sqlite3
+import timeit
 
 class DocSet(object):
 
@@ -135,6 +136,8 @@ class Entry(object):
 
 if __name__ == '__main__':
 
+    start = timeit.default_timer()
+
     indexes = yaml.load(open('indexes.yaml', 'r').read())['cmdlet']
 
     docset = DocSet('PowerShell')
@@ -160,3 +163,9 @@ if __name__ == '__main__':
                 pass
 
     docset.create()
+
+    stop = timeit.default_timer()
+
+    print 'Downloaded {count} entries in {elapsed} seconds.'.format(
+                                                count = len(docset.entries),
+                                                elapsed = (stop - start))
