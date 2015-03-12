@@ -103,13 +103,13 @@ class Entry(object):
             if u[0] == '#':
 
                 try:
-                    soup.find(id=u).decompose()
+                    soup.find(id=u[1:]).decompose()
                 except AttributeError:
                     pass
 
             elif u[0] == '.':
 
-                for element in soup.find_all('div', class_=u):
+                for element in soup.find_all('div', class_=u[1:]):
                     element.decompose()
 
         for link in soup.find_all('a'):
