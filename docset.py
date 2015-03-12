@@ -51,17 +51,13 @@ class DocSet(object):
 
 class Entry(object):
 
-    def __init__(self, name, type_, url, docset):
+    def __init__(self, name, path, type_, url, docset):
 
         self.name = name
         self.type_ = type_
         self.url = url
         self.docset = docset
-
-    @property
-    def path(self):
-
-        return '{name}.html'.format(name = self.name)
+        self.path = path
 
     @property
     def full_path(self):
