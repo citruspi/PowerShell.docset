@@ -70,4 +70,12 @@ class Entry(object):
                                                     docset = self.docset.name,
                                                     name = self.name)
 
-      
+    def download(self):
+
+        r = requests.get(link)
+
+        if r.status_code == 200:
+
+            with open(self.full_path, 'w') as f:
+
+                f.write(r.content)
