@@ -1,3 +1,7 @@
+dependencies:
+
+	pip install -r requirements.txt
+
 clean:
 
 	rm -f PowerShell.docset/Contents/Resources/Documents/*.html
