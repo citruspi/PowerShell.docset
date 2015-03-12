@@ -22,7 +22,7 @@ for index in indexes:
     page = requests.get(index['url']).content
     soup = BeautifulSoup(page)
 
-    if not os.exists('PowerShell.docset/Contents/Resources/Documents/'+index['name']):
+    if not os.path.exists('PowerShell.docset/Contents/Resources/Documents/'+index['name']):
         os.mkdir('PowerShell.docset/Contents/Resources/Documents/'+index['name'])
 
     for div in soup.find_all('div'):
