@@ -3,28 +3,30 @@ import yaml
 import requests
 from docset import DocSet, Entry
 
-indexes = yaml.load(open('indexes.yaml', 'r').read())['cmdlet']
+if __name__ == '__main__':
 
-docset = DocSet('PowerShell')
+    indexes = yaml.load(open('indexes.yaml', 'r').read())['cmdlet']
 
-for index in indexes:
+    docset = DocSet('PowerShell')
 
-    page = requests.get(index['url']).content
-    soup = BeautifulSoup(page)
+    for index in indexes:
 
-    group = index['name']
+        page = requests.get(index['url']).content
+        soup = BeautifulSoup(page)
 
-    for div in soup.find_all('div'):
+        group = index['name']
 
-        try:
-            if div['data-toclevel'] == '2':
-                link = div.a.attrs['href'].strip()
-                title = div.a.attrs['title']
+        for div in soup.find_all('div'):
 
-                docset.entries.append(
-                    Entry(title, group+'-'+title+'.html', 'Command', link))
+            try:
+                if div['data-toclevel'] == '2':
+                    link = div.a.attrs['href'].strip()
+                    title = div.a.attrs['title']
 
-        except KeyError:
-            pass
+                    docset.entries.append(
+                        Entry(title, group+'-'+title+'.html', 'Command', link))
 
-docset.create()
+            except KeyError:
+                pass
+
+    docset.create()
