@@ -7,11 +7,7 @@ import sqlite3
 
 indexes = yaml.load(open('indexes.yaml', 'r').read())['cmdlet']
 
-if os.path.exists('powershell.docset'):
-    shutil.rmtree('powershell.docset')
-os.makedirs('powershell.docset/Contents/Resources/Documents/')
-
-db = sqlite3.connect('powershell.docset/Contents/Resources/docSet.dsidx')
+db = sqlite3.connect('PowerShell.docset/Contents/Resources/docSet.dsidx')
 cur = db.cursor()
 try: cur.execute('DROP TABLE searchIndex;')
 except: pass
@@ -33,7 +29,7 @@ for index in indexes:
                 link = div.a.attrs['href'].strip()
                 title = div.a.attrs['title']
 
-                destination = open('powershell.docset/Contents/Resources/Documents/'+title+'.html', 'w')
+                destination = open('PowerShell.docset/Contents/Resources/Documents/'+title+'.html', 'w')
                 destination.write(requests.get(link).content)
                 destination.close()
 
@@ -63,12 +59,12 @@ infoplist = """<?xml version="1.0" encoding="UTF-8"?>
 </dict>
 </plist>"""
 
-with open('powershell.docset/Contents/Info.plist', 'w') as f:
+with open('PowerShell.docset/Contents/Info.plist', 'w') as f:
     f.write(infoplist)
 
 for entry in entries:
 
-    source = open('powershell.docset/Contents/Resources/Documents/'+entry+'.html', 'r+')
+    source = open('PowerShell.docset/Contents/Resources/Documents/'+entry+'.html', 'r+')
 
     soup = BeautifulSoup(source.read())
 
