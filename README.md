@@ -19,11 +19,21 @@ $ make dependencies
 
 ## Usage
 
+### Manual
+
 ```
 $ make
 ```
 
 Then open the Dash application and add the `PowerShell.docset` file.
+
+### Hosted Feed
+
+Add
+
+> http://powershell.docset.citruspi.io/feed/
+
+as a Docset feed URL to get automatic updates.
 
 ## License
 
