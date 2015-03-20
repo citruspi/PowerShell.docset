@@ -25,6 +25,9 @@ $ make dependencies
 $ make
 ```
 
+It takes 70-90 minutes to build and the end result is a little over 100 MB
+uncompressed.
+
 Then open the Dash application and add the `PowerShell.docset` file.
 
 ### Hosted Feed
